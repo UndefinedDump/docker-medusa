@@ -4,3 +4,8 @@
 .storybook/
 public/
 node_modules/
+
+# DIRS
+data/
+dist/
+*.sql

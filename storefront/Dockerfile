@@ -16,6 +16,10 @@ RUN npm install -g next-cli
 
 COPY . .
 
-COPY develop.sh .
+RUN npm install
 
-ENTRYPOINT ["./develop.sh", "develop"]
+RUN npm run build &> /dev/null
+
+COPY bootstrap.sh .
+
+ENTRYPOINT ["./bootstrap.sh", "develop"]
